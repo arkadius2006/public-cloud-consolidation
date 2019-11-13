@@ -95,3 +95,39 @@ This format (tab-separated, rather than json) makes it easy to use awk and other
     |- jackson.jar
     | - ...
 ```
+
+## How to deploy application
+
+Get source:
+```
+$ git clone https://github.com/arkadius2006/public-cloud-consolidation.git
+...
+
+$ ls
+public-cloud-configuration/
+
+$ cd public-cloud-consolidation/
+```
+
+Build artifact:
+```
+$ mvn package
+...
+
+$ cd target/
+
+$ ls
+app.tar.gz
+```
+
+Unzip it to app directory:
+```
+$ gunzip app.tar.gz
+...
+
+$ cd app
+$ ls
+bin/
+config/
+lib/
+```
