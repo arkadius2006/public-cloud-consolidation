@@ -7,7 +7,7 @@ Example:
 ./generate.sh --hosts 1000 --vms 3000 --output configuration.json
 ```
 
-Generates initial cloud configuration with 1000 hosts and 3000 VMs. Store configuration in file `configuration.json`. Configuration file format is described below.
+Generate initial cloud configuration with 1000 hosts and 3000 VMs. Store configuration in file `configuration.json`. Configuration file format is described below.
 
 ## Consolidation
 Example:
@@ -15,12 +15,15 @@ Example:
 ./consolidate.sh --input input.json --algorithm algo_arkady_1 --output output.json --metrics metrics.txt
 ```
 
-Reads initial configuration from file `input.json`, runs consolidation algorithm `algo_arkady_1`, writes consolidated configuration to file `output.json`, writes run metrics to file `metrics.txt`.
+Read initial configuration from file `input.json`, run consolidation algorithm `algo_arkady_1`, write consolidated configuration to file `output.json`, write run metrics to file `metrics.txt`.
 
 Configuration and metrics file formats are described below.
 
 ## Configuration file format
 We use JSON to store cloud configuration. Cloud configuration format example:
+<details>
+    <summary>Click to expand</summary>
+
 ```
 {
     "hosts": [
@@ -70,6 +73,7 @@ We use JSON to store cloud configuration. Cloud configuration format example:
     ]
 }
 ```
+</details>
 
 ## Metrics file format
 Metrics file contains one or more lines. Each line contains fields: algorithm name, input file name, run time (ms) and consolidated number of hosts. Fields are tab-separated.
@@ -126,6 +130,7 @@ $ gunzip app.tar.gz
 ...
 
 $ cd app
+
 $ ls
 bin/
 config/
