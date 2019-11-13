@@ -76,7 +76,7 @@ We use JSON to store cloud configuration. Cloud configuration format example:
 ```
 
 ## Metrics file format
-Metrics file contains one or more lines. Each line contains fields: algorithm name, input file name, run time (ms) and consolidated number of hosts. Fields are tab-separated. Different lines correspond to different runs, probably on the same output.
+Metrics file contains one or more lines. Each line contains fields: algorithm name, input file name, run time (ms) and consolidated number of hosts. Fields are tab-separated.
 
 Metrics file example:
 ```
@@ -84,4 +84,4 @@ algo_arkady_1   conf_1000h.json 10000   900
 algo_andrei_1   conf_1000h.json 8000    950
 algo_arkady_2   conf_1000h.json 9000    850
 ```
-This format (tab-separated, rather than json) makes it easy to use awk and other Unix command line tools to process results and convert to otehr formats, if necessary.
+This format (tab-separated, rather than json) makes it easy to use awk and other Unix command line tools to process results and convert to other formats, if necessary.
