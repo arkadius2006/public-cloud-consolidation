@@ -7,7 +7,9 @@ Example:
 ./generate.sh --hosts 1000 --vms 3000 --output configuration.json
 ```
 
-Generate initial cloud configuration with 1000 hosts and 3000 VMs. Store configuration in file `configuration.json`. Configuration file format is described below.
+Generate initial cloud configuration with 1000 hosts and 3000 VMs. Store configuration in file `configuration.json`. 
+
+Configuration file format is described below.
 
 ## Consolidation
 Example:
@@ -21,8 +23,6 @@ Configuration and metrics file formats are described below.
 
 ## Configuration file format
 We use JSON to store cloud configuration. Cloud configuration format example:
-<details>
-    <summary>Click to expand</summary>
 
 ```
 {
@@ -73,7 +73,6 @@ We use JSON to store cloud configuration. Cloud configuration format example:
     ]
 }
 ```
-</details>
 
 ## Metrics file format
 Metrics file contains one or more lines. Each line contains fields: algorithm name, input file name, run time (ms) and consolidated number of hosts. Fields are tab-separated.
