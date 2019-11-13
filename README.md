@@ -85,3 +85,17 @@ algo_andrei_1   conf_1000h.json 8000    950
 algo_arkady_2   conf_1000h.json 9000    850
 ```
 This format (tab-separated, rather than json) makes it easy to use awk and other Unix command line tools to process results and convert to other formats, if necessary.
+
+## Application directory layout
+```
+|- app
+  |- bin
+    |- generate.sh
+    |- consolidate.sh
+  |- config
+    |- ...
+  |- lib
+    |- consolidation.jar
+    |- jackson.jar
+    | - ...
+```
