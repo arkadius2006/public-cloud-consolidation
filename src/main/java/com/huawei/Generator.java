@@ -24,7 +24,7 @@ public class Generator {
     public CloudConfiguration generate() {
         Map<String,MachineConfiguration> hostConfigurations = new HashMap<>();
         for (int i = 0; i < this.hosts; i += 1) {
-            String id = String.format("host-%4d", i);
+            String id = String.format("host-%04d", i);
             MachineConfiguration conf = new MachineConfiguration();
             conf.cpu = 1;
             conf.ram = 1;
@@ -33,7 +33,7 @@ public class Generator {
 
         Map<String,MachineConfiguration> vmConfigurations = new HashMap<>();
         for (int j = 0; j < this.vms; j += 1) {
-            String id = String.format("vm-%4d", j);
+            String id = String.format("vm-%04d", j);
             MachineConfiguration conf = new MachineConfiguration();
             conf.cpu = 1;
             conf.ram = 1;
