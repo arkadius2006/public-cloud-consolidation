@@ -8,3 +8,6 @@ target/
 **/*.aux
 **/*.gz
 #**/*.pdf
+
+.DS_Store
+
