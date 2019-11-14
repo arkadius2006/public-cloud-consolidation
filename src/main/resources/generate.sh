@@ -13,4 +13,4 @@ CLASSPATH="$APP_HOME/lib"
 
 COMMAND="java -cp $CLASSPATH $MAIN_CLASS $ARGS"
 
-echo "$COMMAND"
+eval "$COMMAND"
