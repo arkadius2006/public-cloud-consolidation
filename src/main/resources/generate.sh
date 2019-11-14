@@ -9,9 +9,9 @@ APP_HOME=`cd $BIN_DIR/.. && pwd`
 echo "App home directory: $APP_HOME"
 echo
 
-CLASSPATH="$APP_HOME/lib"
+CLASSPATH="$APP_HOME/lib/*"
 
-COMMAND="java -cp $CLASSPATH $MAIN_CLASS $ARGS"
+COMMAND='java -classpath "$CLASSPATH" $MAIN_CLASS $ARGS'
 
 echo "$COMMAND"
 eval "$COMMAND"
