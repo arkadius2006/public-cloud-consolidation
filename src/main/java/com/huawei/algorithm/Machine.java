@@ -1,6 +1,7 @@
 package com.huawei.algorithm;
 
-public class Configuration {
+public class Machine {
+    String id;
     int cpu;
     int ram;
 }

@@ -3,27 +3,28 @@ package com.huawei.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-// Sort configurations by RAM/CPU ratio. Accepted ratios are: 2^p where p = 1, 2, 3.
-public class RatioFactorization {
+// Sort machines by RAM/CPU ratio. Accepted ratios are: 2^p where p = 1, 2, 3.
+public class Factorization {
+    static final int MIN_P = 1;
     static final int MAX_P = 3;
 
-    public RatioGroup[] factorize(List<Configuration> configurations) {
-        RatioGroup[] groups = new RatioGroup[MAX_P + 1];
+    public Group[] factorize(List<Machine> machines) {
+        Group[] groups = new Group[MAX_P + 1];
         for (int p = 0; p <= MAX_P; p += 1) {
-            RatioGroup g = groups[p];
+            Group g = groups[p];
             g.p = p;
-            g.configurations = new ArrayList<>();
+            g.machines = new ArrayList<>();
         }
 
-        for (Configuration c: configurations) {
+        for (Machine c: machines) {
             int r = getRatio(c.ram, c.cpu);
             int p = logRatio(r);
-            if (p > MAX_P) {
+            if (p > MAX_P || p < MIN_P) {
                 throw new IllegalArgumentException("Illegal ratio logarithm: " + p);
             }
 
-            RatioGroup g = groups[p];
-            g.configurations.add(c);
+            Group g = groups[p];
+            g.machines.add(c);
         }
 
         return groups;
