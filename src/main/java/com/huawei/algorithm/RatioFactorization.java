@@ -1,12 +1,13 @@
 package com.huawei.algorithm;
 
 import java.util.ArrayList;
+import java.util.List;
 
 // Sort configurations by RAM/CPU ratio. Accepted ratios are: 2^p where p = 1, 2, 3.
 public class RatioFactorization {
     static final int MAX_P = 3;
 
-    public RatioGroup[] factorize(Configuration[] configurations) {
+    public RatioGroup[] factorize(List<Configuration> configurations) {
         RatioGroup[] groups = new RatioGroup[MAX_P + 1];
         for (int p = 0; p <= MAX_P; p += 1) {
             RatioGroup g = groups[p];
@@ -25,7 +26,7 @@ public class RatioFactorization {
             g.configurations.add(c);
         }
 
-        throw new IllegalArgumentException("Not implemented");
+        return groups;
     }
 
     private int getRatio(int ram, int cpu) {
