@@ -1,7 +1,9 @@
 package com.huawei.algorithm;
 
-import java.util.Map;
+
+import java.util.List;
 
 public class Allocation {
-    public Map<String, String> vmsByHost;
+    public List<Host> hosts;
+    public List<Machine> unallocatedVMs;
 }
