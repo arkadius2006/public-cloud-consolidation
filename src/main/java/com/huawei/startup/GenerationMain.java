@@ -1,4 +1,4 @@
-package com.huawei;
+package com.huawei.startup;
 
 import com.huawei.algorithm.Cloud;
 import com.huawei.algorithm.Generator;

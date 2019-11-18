@@ -1,5 +1,7 @@
 package com.huawei;
 
+import com.huawei.startup.GenerationParams;
+import com.huawei.startup.GenerationParamsParser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

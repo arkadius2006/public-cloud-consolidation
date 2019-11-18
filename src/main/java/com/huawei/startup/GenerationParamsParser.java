@@ -1,5 +1,6 @@
-package com.huawei;
+package com.huawei.startup;
 
+import com.huawei.startup.GenerationParams;
 import org.apache.commons.cli.*;
 
 public class GenerationParamsParser {
