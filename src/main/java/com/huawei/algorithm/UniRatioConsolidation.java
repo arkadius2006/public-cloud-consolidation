@@ -6,11 +6,11 @@ import java.util.*;
  * Algorithm assumes hosts and VMs share the same CPU/RAM ratio.
  *
  * Additional assumptions:
- * host[a] is a group sharing CPU = 2^a, 5 <= a <= 6
- * vms[a]  is a group sharing CPU = 2^a, 1 <= a <= 5
+ * hostGroups[a]  is a group sharing CPU = 2^a, 5 <= a <= 6
+ * guestGroups[a] is a group sharing CPU = 2^a, 1 <= a <= 5
  */
 
-public class UniConsolidationAlgorithm {
+public class UniRatioConsolidation {
     private List<Machine> unallocatedMachines = new ArrayList<>();
     private HostPool hostPool = new ArrayHostPool();
 
