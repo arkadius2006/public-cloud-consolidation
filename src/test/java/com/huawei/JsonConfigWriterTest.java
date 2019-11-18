@@ -1,5 +1,7 @@
 package com.huawei;
 
+import com.huawei.algorithm.Cloud;
+import com.huawei.algorithm.Generator;
 import com.huawei.io.JsonConfigurationWriter;
 import org.junit.Test;
 
@@ -10,7 +12,7 @@ public class JsonConfigWriterTest {
 
     @Test
     public void test() throws IOException  {
-        CloudConfiguration config = new Generator(1, 1).generate();
+        Cloud config = new Generator(1, 1).generate();
         StringWriter sw = new StringWriter();
         new JsonConfigurationWriter().write(config, sw);
 
