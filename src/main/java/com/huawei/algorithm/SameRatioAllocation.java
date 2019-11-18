@@ -5,7 +5,10 @@ package com.huawei.algorithm;
  */
 public class SingleAllocation {
 
-    public Allocation allocate(Machine[]hosts, Machine[] vms) {
+    // host[a] is a group sharing CPU = 2^a
+    // vms[a]  is a group sharing CPU = 2^a
+    // assume 1 <= a <= 5
+    public Allocation allocate(MachineGroup[] hosts, MachineGroup[] vms) {
         throw new IllegalArgumentException("Not implemented yet");
     }
 
