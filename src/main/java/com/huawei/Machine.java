@@ -1,4 +1,4 @@
-package com.huawei.algorithm;
+package com.huawei;
 
 /**
  * Both host and VM machines.

@@ -1,6 +1,6 @@
 package com.huawei.io;
 
-import com.huawei.algorithm.Cloud;
+import com.huawei.Cloud;
 
 import java.io.IOException;
 import java.io.Writer;

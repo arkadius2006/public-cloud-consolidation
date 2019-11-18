@@ -1,5 +1,8 @@
 package com.huawei.algorithm;
 
+import com.huawei.Machine;
+import com.huawei.MachineGroup;
+
 import java.util.*;
 
 /**

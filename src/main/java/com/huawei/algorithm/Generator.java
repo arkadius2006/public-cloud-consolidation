@@ -1,5 +1,8 @@
 package com.huawei.algorithm;
 
+import com.huawei.Cloud;
+import com.huawei.Machine;
+
 import java.util.*;
 
 public class Generator {

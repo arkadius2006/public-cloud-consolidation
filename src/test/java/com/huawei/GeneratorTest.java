@@ -1,8 +1,6 @@
 package com.huawei;
 
-import com.huawei.algorithm.Cloud;
 import com.huawei.algorithm.Generator;
-import com.huawei.algorithm.Machine;
 import org.junit.Assert;
 import org.junit.Test;
 

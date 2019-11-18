@@ -1,4 +1,6 @@
-package com.huawei.algorithm;
+package com.huawei;
+
+import com.huawei.Machine;
 
 import java.util.List;
 import java.util.Map;

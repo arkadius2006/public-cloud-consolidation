@@ -1,6 +1,6 @@
 package com.huawei.startup;
 
-import com.huawei.algorithm.Cloud;
+import com.huawei.Cloud;
 import com.huawei.algorithm.Generator;
 import com.huawei.io.ConfigurationWriter;
 import com.huawei.io.JsonConfigurationWriter;

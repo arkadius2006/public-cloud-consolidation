@@ -1,5 +1,7 @@
 package com.huawei.algorithm;
 
+import com.huawei.Machine;
+
 import java.util.ArrayList;
 import java.util.List;
 

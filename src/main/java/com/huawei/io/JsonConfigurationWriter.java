@@ -2,7 +2,7 @@ package com.huawei.io;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.huawei.algorithm.Cloud;
+import com.huawei.Cloud;
 
 import java.io.IOException;
 import java.io.Writer;
