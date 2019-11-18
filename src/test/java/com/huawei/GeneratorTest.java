@@ -14,17 +14,17 @@ public class GeneratorTest {
         Generator g = new Generator(10, 20);
         Cloud config = g.generate();
 
-        Assert.assertEquals(10, config.hostConfigurations.size());
-        Assert.assertEquals(20, config.vmConfigurations.size());
+        Assert.assertEquals(10, config.hosts.size());
+        Assert.assertEquals(20, config.vms.size());
         Assert.assertEquals(20, config.locations.size());
 
         Map<String, Machine> vmsById = new HashMap<>();
-        for (Machine m: config.vmConfigurations) {
+        for (Machine m: config.vms) {
             vmsById.put(m.id, m);
         }
 
         Map<String, Machine> hostsById = new HashMap<>();
-        for (Machine m: config.hostConfigurations) {
+        for (Machine m: config.hosts) {
             hostsById.put(m.id, m);
         }
 

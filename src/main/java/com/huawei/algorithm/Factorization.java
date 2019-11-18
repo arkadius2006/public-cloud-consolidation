@@ -10,8 +10,9 @@ import java.util.List;
 class Factorization {
 
     MachineGroup[][] sort(List<Machine> machines) {
-        MachineGroup[][] groups = new MachineGroup[MAX_P + 1][MAX_A + 1];
+        MachineGroup[][] groups = new MachineGroup[MAX_P + 1][];
         for (int p = MIN_P;p <= MAX_P; p += 1) {
+            groups[p] = new MachineGroup[MAX_A + 1];
             for (int a = MIN_A; a <= MAX_A; a += 1) {
                 MachineGroup g = new MachineGroup();
                 g.ids = new ArrayList<>();
@@ -62,9 +63,10 @@ class Factorization {
         throw new IllegalArgumentException("Number " + x + " is not a power of 2");
     }
 
+    // todo move these params to constructor, they are different for hosts/VMs
     static final int MIN_P = 1;
     static final int MAX_P = 3;
 
     static final int MIN_A = 1;
-    static final int MAX_A = 5;
+    static final int MAX_A = 6;
 }

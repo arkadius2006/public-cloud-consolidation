@@ -73,8 +73,8 @@ public class Generator {
         }
 
         Cloud cc = new Cloud();
-        cc.hostConfigurations = hosts;
-        cc.vmConfigurations = vms;
+        cc.hosts = hosts;
+        cc.vms = vms;
         cc.locations = locations;
         return cc;
     }
