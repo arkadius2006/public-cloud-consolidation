@@ -9,10 +9,10 @@ import java.util.List;
  * Host that has some VM already allocated into it.
  */
 public class Host {
-    String id;
-    List<Machine> vms;
-    int remainingCPU;
-    int remainingRAM;
+    public String id;
+    public List<Machine> vms;
+    public int remainingCPU;
+    public int remainingRAM;
 
     Host() {
         vms = new ArrayList<>();
