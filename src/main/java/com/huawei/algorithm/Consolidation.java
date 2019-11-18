@@ -15,7 +15,7 @@ public class Consolidation {
         // do allocation for each ratio independently
         Allocation sumAllocation = new Allocation();
         for (int p = Factorization.MIN_P; p <= Factorization.MAX_P; p += 1) {
-            Allocation singleRatioAllocation = new UniRatioConsolidation().allocate(
+            Allocation singleRatioAllocation = new MonoConsolidation().allocate(
                     Arrays.asList(hostGroups[p]),
                     Arrays.asList(vmGroups[p]));
 

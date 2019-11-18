@@ -10,7 +10,7 @@ import java.util.*;
  * guestGroups[a] is a group sharing CPU = 2^a, 1 <= a <= 5
  */
 
-public class UniRatioConsolidation {
+public class MonoConsolidation {
     private List<Machine> unallocatedMachines = new ArrayList<>();
     private HostPool hostPool = new ArrayHostPool();
 
