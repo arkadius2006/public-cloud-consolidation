@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Algorithm assumes hosts and VMs share the same CPU/RAM ratio.
  */
-public class SameRatioAllocation {
+public class UnoConsolidation {
     private List<Machine> unallocatedMachines = new ArrayList<>();
 
     // hosts by remaining CPU capacity
