@@ -6,11 +6,11 @@ import java.util.List;
 // Sort machines by RAM/CPU. Assumptions: CPU = 2^a, 1 <= a <= 5. RAM/CPU = 2^p, 1 <= p <= 3
 class Factorization {
 
-    Group[][] sort(List<Machine> machines) {
-        Group[][] groups = new Group[MAX_P + 1][MAX_A + 1];
+    MachineGroup[][] sort(List<Machine> machines) {
+        MachineGroup[][] groups = new MachineGroup[MAX_P + 1][MAX_A + 1];
         for (int p = MIN_P;p <= MAX_P; p += 1) {
             for (int a = MIN_A; a <= MAX_A; a += 1) {
-                Group g = new Group();
+                MachineGroup g = new MachineGroup();
                 g.ids = new ArrayList<>();
 
                 g.cpu = 1 << a;

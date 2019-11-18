@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Machine group sharing the same CPU and RAM.
  */
-class Group {
+class MachineGroup {
     int cpu;
     int ram;
     List<String> ids;
