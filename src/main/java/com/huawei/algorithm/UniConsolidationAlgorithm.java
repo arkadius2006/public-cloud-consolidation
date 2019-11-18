@@ -4,14 +4,17 @@ import java.util.*;
 
 /**
  * Algorithm assumes hosts and VMs share the same CPU/RAM ratio.
+ *
+ * Additional assumptions:
+ * host[a] is a group sharing CPU = 2^a, 5 <= a <= 6
+ * vms[a]  is a group sharing CPU = 2^a, 1 <= a <= 5
  */
-public class UniConsolidation {
+
+public class UniConsolidationAlgorithm {
     private List<Machine> unallocatedMachines = new ArrayList<>();
     private HostPool hostPool = new ArrayHostPool();
 
-    // host[a] is a group sharing CPU = 2^a, 5 <= a <= 6
-    // vms[a]  is a group sharing CPU = 2^a, 1 <= a <= 5
-    Allocation allocate(MachineGroup[] hosts, MachineGroup[] vms) {
+    Allocation allocate(List<MachineGroup> hostGroups, List<MachineGroup> guestGroups) {
         // start from larger VMs
         // to allocation VM find host with the least fitting capacity
         // allocate VM to the chosen host
@@ -22,9 +25,9 @@ public class UniConsolidation {
         // add VM to the list of unallocated VMs
 
         // add hosts to pool
-        for (MachineGroup mg: hosts) {
-            for (String id: mg.ids) {
-                Host h = new Host(id, mg.cpu, mg.ram);
+        for (MachineGroup group: hostGroups) {
+            for (String id: group.ids) {
+                Host h = new Host(id, group.cpu, group.ram);
                 hostPool.add(h);
             }
         }
@@ -32,9 +35,11 @@ public class UniConsolidation {
         // init unallocated list
         this.unallocatedMachines = new ArrayList<>();
 
+        // sort guest groups desc
+        guestGroups.sort((o1, o2) -> Integer.compare(o2.cpu, o1.cpu));
+
         // start allocation from larger VMs
-        for (int a = Factorization.MAX_A; a >= Factorization.MIN_A; a -= 1) {
-            MachineGroup g = vms[a]; // guaranteed to be not null by Factorization algorithms, IDs could be empty
+        for (MachineGroup g: guestGroups) {
             for (String id: g.ids) {
                 Machine m = new Machine(id, g.cpu, g.ram);
                 allocate(m);

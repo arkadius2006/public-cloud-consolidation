@@ -1,6 +1,5 @@
 package com.huawei.algorithm;
 
-
 import java.util.List;
 
 public class Allocation {

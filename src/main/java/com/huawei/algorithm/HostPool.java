@@ -55,12 +55,12 @@ class ArrayHostPool implements HostPool {
     @Override
     public Host poll(int requestedCpu) {
         for (int cpu = requestedCpu; cpu <= 64; cpu += 1) {
-            HostGroup hg = groups[cpu];
-            if (hg == null || hg.stack.isEmpty()) {
+            HostGroup group = groups[cpu];
+            if (group == null || group.stack.isEmpty()) {
                 continue;
             }
 
-            return hg.stack.pop(); // use as a stack to retrieve first hosts that has been used partially
+            return group.stack.pop(); // use as a stack to retrieve first hosts that has been used partially
             // this reduces number of partially used hosts
         }
 
